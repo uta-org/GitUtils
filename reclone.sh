@@ -1,5 +1,7 @@
 #!/bin/bash
 
+source linking.sh
+
 function iterate_dirs()
 {
 	dir="$1"
@@ -8,7 +10,7 @@ function iterate_dirs()
 	# git --git-dir="$gitdir" --work-tree="$dir" add --ignore-removal --all
 
 	# echo "$dir"
-	url=$(git --git-dir="$gitdir" --work-tree="$dir" config --get remote.origin.url)
+	url=$(git --git-dir="$gitdir" --work-tree="$dir" config --get remote.$remote.url)
 	rm -rf "$dir"
 	git --git-dir="$gitdir" --work-tree="$dir" clone "$url"
 }

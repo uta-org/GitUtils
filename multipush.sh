@@ -1,15 +1,6 @@
 #!/bin/bash
 
-remote=$1
-branch=$2
-
-if [ -z "$remote" ]; then
-	remote="origin"
-fi
-
-if [ -z "$branch" ]; then
-	branch="master"
-fi
+source linking.sh
 
 git config --global credential.helper store
 
