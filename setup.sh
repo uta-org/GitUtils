@@ -37,7 +37,7 @@ shopt -s nocasematch
 if [ "$create_alias" == "y" ]; then
 	for file in "${files[@]}"; do
 		file=${file//.\//}
-		if [ "$file" != "setup.sh" ]; then
+		if [[ "$file" != "setup.sh" && "$file" != "api.sh" ]]; then
 			git config --global alias.${file//.sh/} "!bash '$working_dir$file'"
 		fi
 	done

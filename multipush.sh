@@ -15,7 +15,8 @@ git config --global credential.helper store
 
 function iterate_dirs()
 {
-	gitdir="$1"
+	dir="$1"
+	gitdir="$2"
 
 	git --git-dir="$gitdir" --work-tree="$dir" add --ignore-removal --all
 
