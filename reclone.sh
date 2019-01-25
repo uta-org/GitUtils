@@ -1,6 +1,6 @@
 #!/bin/bash
 
-source linking.sh
+bash "`dirname \"$0\"`/linking.sh" "$1" "$2" "$3"
 
 function iterate_dirs()
 {

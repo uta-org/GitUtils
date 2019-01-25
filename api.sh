@@ -1,6 +1,6 @@
 #!/bin/bash
 
-mypath=`dirname "$0"`
+mypath=$([[ ! -z "$pth" ]] && echo "$pth" || echo "`dirname \"$0\"`")
 
 oIFS="$IFS"
 IFS=$'\n'
