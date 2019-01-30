@@ -12,7 +12,7 @@ function iterate_dirs()
 	git --git-dir="$gitdir" --work-tree="$dir" add --ignore-removal --all
 
 	while [ -z "$commit_msg" ]; do
-		read -p "Enter message commit: " commit_msg
+		read -p "(`basename $dir`) Enter message commit: " commit_msg
 	done
 
 	git --git-dir="$gitdir" --work-tree="$dir" commit -m "$commit_msg"
