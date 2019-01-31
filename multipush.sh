@@ -17,6 +17,8 @@ function iterate_dirs()
 
 	git --git-dir="$gitdir" --work-tree="$dir" commit -m "$commit_msg"
 	git --git-dir="$gitdir" --work-tree="$dir" push -u "$remote" "$branch"
+
+	clear
 }
 
 source api.sh
