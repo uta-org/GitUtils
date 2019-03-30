@@ -34,6 +34,9 @@ because when you commit files in your enviroment every singleline is appended wi
 Saving the unstaged changes and then by using this tool you can easily reclone all the folders you need.  
 ```
 
+**Note for multipush script:** You can clone this script in any folder, and call it from any folder.
+
+
 ## Issues
 
 Having issues? Just report in [the issue section](/issues). **Thanks for the feedback!**
